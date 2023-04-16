@@ -1,0 +1,206 @@
+1.basic arithmatic program
+
+    let a = 25;
+    let b = 75;
+    let addition = a+b;
+    console.log(addition);
+
+1a.Basic arithmatic operations
+
+    let m = prompt("enter the value of m:");
+    let n = prompt("enter the value of n:");
+    let product = m*n;
+    let divide = product/2;
+    let result = divide%7;
+    console.log(result);
+ 
+1b.Statistics
+
+    function calcsum(max){
+    let count=0;
+    let sum=0;
+    for(i=1;i<max;i++){
+    if(i%2==0||i%7==0){
+    count++;
+    sum += i;
+      }
+}
+    return [count,sum];
+      }
+     let max = prompt("enter the value for max:")
+     let result=calcsum(max);
+     console.log(count:${result[0]},sum:${result[1]});
+
+1c.Even or Odd Number
+
+     function booleanisEven(n) {
+     return n % 2 == 0;
+}
+
+     function booleanisOdd(n) {
+     return !isEven(n);
+}
+     let N=prompt("enter the value of N");
+     let M=prompt("enter the value of M");
+     console.log(isEven(N),isOdd(M));
+
+2.Number as a text
+ 
+     function numberAsAText(num) {
+     const digits = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight',         'nine'];
+     let result = '';
+
+  do {
+    result = digits[num % 10] + ' ' + result;
+    num = Math.floor(num / 10);
+  } while (num > 0);
+
+  return result.trim();
+}
+   console.log(numberAsAText(0123456789));
+
+4.Prime Numbers
+      
+       function isPrime(n) {
+  if (n < 2) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function calcPrimesUpTo(n) {
+  const primes = [];
+  for (let i = 2; i <= n; i++) {
+    if (isPrime(i)) {
+      primes.push(i);
+    }
+  }
+  return primes;
+}
+
+console.log(calcPrimesUpTo(100));
+
+12.prime factorization
+   
+       function calcPrimeFactors(n) {
+  const factors = [];
+  let divide = 2;
+  while (n > 2) {
+    if (n % divide == 0) {
+      factors.push(divide);
+      n /= divide;
+    } else {
+      divisor++;
+    }
+  }
+  return factors;
+}
+let n=prompt("enter the value:")
+console.log(calcPrimeFactors(n));
+
+
+problems
+
+1.program to find only strings
+
+function containsOnlyDigits(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] < '0' || str[i] > '9') {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(containsOnlyDigits('12345'));
+
+2.Converting String into int, long, float, or double: 
+
+    let str = '123.45';
+
+// convert to int
+let intNum = parseInt(str);
+console.log(intNum);
+
+// convert to long
+let longNum = BigInt(intNum);
+console.log(longNum);
+
+// convert to float
+let floatNum = parseFloat(str);
+console.log(floatNum); 
+
+// convert to double
+let doubleNum = parseFloat(str);
+console.log(doubleNum); 
+
+3.Removing duplicate numbers:
+
+function removeDuplicates(str) {
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    if (result.indexOf(str[i]) == -1) {
+      result += str[i];
+    }
+  }
+  return result;
+}
+
+let inputStr = "java script";
+let outputStr = removeDuplicates(inputStr);
+console.log(outputStr);
+
+4.Counting duplicate numbers
+
+function countDuplicates(array) {
+  let count = 0;
+  let duplicateNumbers = {};
+
+  for (let i = 0; i < array.length; i++) {
+    if (duplicateNumbers[array[i]]) {
+      duplicateNumbers[array[i]] += 1;
+      count += 1;
+    } else {
+      duplicateNumbers[array[i]] = 1;
+    }
+  }
+
+  return count;
+}
+
+let array = [7, 9, 3, 4, 2, 5, 8, 5];
+console.log(countDuplicates(array)); 
+
+5.Joining multiple strings with a delimiter:
+
+
+     function joinStrings(strings, delimiter) {
+     return strings.join(delimiter);
+   }
+
+     const strings = ["Tentacle", "Infotech"];
+     const delimiter = ", ";
+     const result = joinStrings(strings, delimiter);
+     console.log(result); 
+
+
+
+
+
+
+         
+    
+     
+    
+    
+     
+
+   
+
+   
+
