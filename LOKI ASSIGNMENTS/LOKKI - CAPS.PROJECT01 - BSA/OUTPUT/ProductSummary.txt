@@ -1,0 +1,6 @@
+SUMMARY OF CINEMA DETAILS
+Month: APRIL
+Date: 10-04-2023
+Transaction details: CINEMA JAILER
+Credit: 0
+Debit: -550
